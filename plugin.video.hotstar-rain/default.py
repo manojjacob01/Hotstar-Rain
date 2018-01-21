@@ -452,7 +452,7 @@ def get_episodes():
 	for result in html['resultObj']['contentList']:
 		fin_ep_titles = '[B][COLOR orange]'+str(result['episodeNumber'])+' - '+result['episodeTitle'].encode('ascii', 'ignore')+'[/COLOR][/B]'
 		duration = result['duration']
-		fin_ep_links = 'http://getcdn.hotstar.com/AVS/besc?action=GetCDN&asJson=Y&channel=PCTV&id='+str(result['contentId'])+'&type=VOD'
+		fin_ep_links = 'http://agl-intl.hotstar.com/AVS/besc?action=GetCDN&asJson=Y&channel=PCTV&id='+str(result['contentId'])+'&type=VOD'
 		fin_ep_images = 'http://media0-starag.startv.in/r1/thumbs/PCTV/'+str(result['urlPictures'])[-2:]+'/'+str(result['urlPictures'])+'/PCTV-'+str(result['urlPictures'])+'-hs.jpg'
 		addDir(9, fin_ep_titles, fin_ep_links, fin_ep_images,duration, fold)
 		
